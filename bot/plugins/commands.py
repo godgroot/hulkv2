@@ -28,14 +28,14 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = "@cinemazipnews",
+                caption = f"<code>{file_name}</code>",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton
                                 (
-                                    '💢 Our Channel 💢', url="https://t.me/cinema_zip"
+                                    '�🥵SHARE NOW🥵', url="https://t.me/share/url?url=https://t.me/cinemazip"
                                 )
                         ]
                     ]
@@ -47,12 +47,12 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+        InlineKeyboardButton('📀 OTT Updates 📀', url='https://t.me/Cinemazipnews'),
+        InlineKeyboardButton('⚜️Series⚜️', url ='https://t.me/Cinemazipseries')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+        InlineKeyboardButton('🔱latest movies🔱', url='https://t.me/Cinemazipmovies')
     ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
+        InlineKeyboardButton('No Help ⚙', callback_data="help")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
